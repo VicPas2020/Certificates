@@ -36,7 +36,7 @@ public class CertificateController {
         KeyStore ks = KeyStore.getInstance("JKS");
         char[] pwdArray = "changeit".toCharArray();
 
-        ks.load(new FileInputStream("C:\\java\\keystore.jks"), pwdArray);
+        ks.load(new FileInputStream("C:\\Java-for-tests\\Actuator_certificate\\src\\main\\resources\\keystore.jks"), pwdArray);
         X509Certificate cert = (X509Certificate) ks.getCertificate("java");
         Date notAfter = cert.getNotAfter();
 
