@@ -18,6 +18,7 @@ import java.time.Instant;
 import java.util.Date;
 
 @RestController
+@Timed("certificates")
 public class CertificateController {
 
     private final Gauge gauge;
@@ -25,7 +26,7 @@ public class CertificateController {
     public CertificateController(CollectorRegistry collectorRegistry) {
         gauge = Gauge.build()
                 .name("certificates")
-                .help("certificates")
+                .help("certificates info")
                 .register(collectorRegistry);
     }
 
